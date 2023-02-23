@@ -113,13 +113,12 @@ const uniq = (arr, callBack) => {
   for (let i = 0; i < arr.length; i++) {
     for (let k = i + 1; k < arr.length; k++) {
     if (arr[i] === arr[k]) {
-      arr.splice(i, 1)
+      arr.splice(k, 1)
      }
     }
   }
   callBack(arr)
 }
-
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -143,11 +142,12 @@ console.log("----------------------")
 */
 
 // CODE HERE 
-function each (arr, callback) {
+function each (arr, callBack) {
   for (let i = 0; i < arr.length; i++) {
-    callback(arr[i], i)
+    callBack(arr[i], i)
   }
 }
+
 
 /*
   Invoke the each function, passing in the names array and a callback function.
